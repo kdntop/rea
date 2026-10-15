@@ -1,0 +1,10 @@
+#!/bin/bash
+# Installs npm dependencies so tests and linters work in Claude Code cloud sessions.
+set -euo pipefail
+
+if [ "${CLAUDE_CODE_REMOTE:-}" != "true" ]; then
+  exit 0
+fi
+
+cd "$CLAUDE_PROJECT_DIR"
+npm ci --no-audit --no-fund
