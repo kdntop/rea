@@ -1,4 +1,25 @@
 {
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(npm ci)",
+      "Bash(npm install)",
+      "Bash(npm run build:cached)",
+      "Bash(npm run check:fast)",
+      "Bash(npm run check:changed)",
+      "Bash(npm run docs:check)",
+      "Bash(npm run typecheck)",
+      "Bash(npm run lint)",
+      "Bash(npm run lint:details)",
+      "Bash(npm run format:check)",
+      "Bash(npm run test:local:*)",
+      "Bash(npm run test:focused:*)",
+      "Bash(npm run test:changed)",
+      "Bash(npx vitest run:*)",
+      "Bash(npx oxlint:*)",
+      "Bash(npx tsc --noEmit:*)"
+    ]
+  },
   "hooks": {
     "SessionStart": [
       {
